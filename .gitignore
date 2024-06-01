@@ -16,3 +16,8 @@
 /[Pp]ackages/
 /[Pp]rojectSettings/
 Assembly-CSharp.csproj
+.vscode/settings.json
+Unity.CollabProxy.Editor.csproj
+Unity.PlasticSCM.Editor.csproj
+*.csproj
+TGJ24.sln
