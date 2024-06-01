@@ -72,14 +72,17 @@ public class AppCalendar : AppBase
         detail.SetActive(true);
         detailTitle.text = month + "月" + day + "日";
         detailContent.text = "这是" + month + "月" + day + "日的内容";
-        if (eventMonth.Contains(month) && eventDay.Contains(day))
+        for (int i = 0; i < eventMonth.Count; i++)
         {
-            int index = eventMonth.IndexOf(month);
-            detailContent.text = eventContent[index];
-        }
-        else
-        {
-            detailContent.text = "今日无事发生";
+            if (eventMonth[i] == month && eventDay[i] == day)
+            {
+                detailContent.text = eventContent[i];
+                break;
+            }
+            else
+            {
+                detailContent.text = "今日无事发生";
+            }
         }
     }
 
