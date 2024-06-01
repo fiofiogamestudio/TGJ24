@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AppCalendar : AppBase
 {
@@ -15,12 +16,23 @@ public class AppCalendar : AppBase
     [SerializeField]
     GameObject body;
     List<List<AppCalendarDay>> days;
+    [SerializeField]
+    GameObject detail;
+    [SerializeField]
+    Text detailTitle;
+    [SerializeField]
+    Text detailContent;
     #endregion
 
     #region 数据相关变量
     int year = 2024;
     int month = 6;
     int day = 1;
+
+    // 事件数据
+    List<int> eventMonth = new List<int>();
+    List<int> eventDay = new List<int>();
+    List<String> eventContent = new List<String>();
     #endregion
 
     // Start is called before the first frame update
@@ -33,14 +45,44 @@ public class AppCalendar : AppBase
             List<AppCalendarDay> dayList = new List<AppCalendarDay>();
             foreach (Transform day in child)
             {
-                dayList.Add(day.GetComponent<AppCalendarDay>());
+                AppCalendarDay appCalendarDay = day.GetComponent<AppCalendarDay>();
+                dayList.Add(appCalendarDay);
+                appCalendarDay.SetRoot(this);
             }
             days.Add(dayList);
         }
+
+        // 初始化事件数据
+        eventMonth.Add(6);
+        eventDay.Add(1);
+        eventContent.Add("儿童节");
+        eventMonth.Add(6);
+        eventDay.Add(3);
+        eventContent.Add("TGJ提交");
+        eventMonth.Add(7);
+        eventDay.Add(12);
+        eventContent.Add("放暑假");
+
         Refresh();
     }
 
     #region UI控制函数
+    public void ShowDetail(int month, int day)
+    {
+        detail.SetActive(true);
+        detailTitle.text = month + "月" + day + "日";
+        detailContent.text = "这是" + month + "月" + day + "日的内容";
+        if (eventMonth.Contains(month) && eventDay.Contains(day))
+        {
+            int index = eventMonth.IndexOf(month);
+            detailContent.text = eventContent[index];
+        }
+        else
+        {
+            detailContent.text = "今日无事发生";
+        }
+    }
+
     void ClearRow(int row)
     {
         foreach (var day in days[row])
@@ -59,11 +101,17 @@ public class AppCalendar : AppBase
         }
     }
 
-    void SetDay(int row, int col, String day, bool isToday, bool hasEvent)
+    void SetDay(int row, int col, String text, bool isToday, bool hasEvent, int month, int day)
     {
-        days[row][col].SetDayText(day);
+        days[row][col].SetDayText(text);
         days[row][col].SetTodayMark(isToday);
         days[row][col].SetEventMark(hasEvent);
+        days[row][col].SetData(month, day);
+    }
+
+    void SetDayEvent(int row, int col)
+    {
+        days[row][col].SetEventMark(true);
     }
     #endregion
 
@@ -73,27 +121,54 @@ public class AppCalendar : AppBase
         ClearAll();
 
         // 设置基本日历
-        SetBasicCalendar();
+        ShowBasicCalendar();
 
         // 高亮今日
-        SetToday();
+        ShowToday();
+
+        // 设置事件
+        ShowEvent();
     }
 
-    private void SetToday()
+    private void ShowEvent()
+    {
+        for (int i = 0; i < eventMonth.Count; i++)
+        {
+            int monthOfEvent = eventMonth[i];
+            int dayOfEvent = eventDay[i];
+
+            if (monthOfEvent == month)
+            {
+                int index = dayOfEvent + GetWeekday(year, monthOfEvent, 1) - 1;
+                int row = index / 7 + 1;
+                int col = index % 7;
+                SetDayEvent(row, col);
+            }
+            else if (monthOfEvent == month + 1)
+            {
+                int index = dayOfEvent + GetWeekday(year, monthOfEvent, 1) - 1;
+                int row = index / 7 + 7;
+                int col = index % 7;
+                SetDayEvent(row, col);
+            }
+        }
+    }
+
+    private void ShowToday()
     {
         int weekday = GetWeekday(year, month, day);
         int row = (weekday + day - 1) / 7 + 1;
         int col = (weekday + day - 1) % 7;
-        SetDay(row, col, day.ToString(), true, false);
+        SetDay(row, col, day.ToString(), true, false, month, day);
     }
 
-    private void SetBasicCalendar()
+    private void ShowBasicCalendar()
     {
         // 根据日期获取星期
         int weekday = GetWeekday(year, month, day);
 
         // 设置当月月份
-        SetDay(0, weekday, month + "月", false, false);
+        SetDay(0, weekday, month + "月", false, false, 0, 0);
 
         // 设置当月日期
         int daysInMonth = DateTime.DaysInMonth(year, month);
@@ -102,7 +177,7 @@ public class AppCalendar : AppBase
             int index = weekday + i - 1;
             int row = index / 7 + 1;
             int col = index % 7;
-            SetDay(row, col, i.ToString(), false, false);
+            SetDay(row, col, i.ToString(), false, false, month, i);
         }
 
         // 设置下月日期
@@ -117,7 +192,7 @@ public class AppCalendar : AppBase
 
         int weekdayNextMonth = GetWeekday(nextYear, nextMonth, 1);
         // 设置下个月月份
-        SetDay(6, weekdayNextMonth, nextMonth + "月", false, false);
+        SetDay(6, weekdayNextMonth, nextMonth + "月", false, false, 0, 0);
 
         int nextMonthDays = DateTime.DaysInMonth(nextYear, nextMonth);
         for (int i = 1; i <= nextMonthDays; i++)
@@ -125,7 +200,7 @@ public class AppCalendar : AppBase
             int index = weekdayNextMonth + i - 1;
             int row = index / 7 + 7;
             int col = index % 7;
-            SetDay(row, col, i.ToString(), false, false);
+            SetDay(row, col, i.ToString(), false, false, nextMonth, i);
         }
     }
 
