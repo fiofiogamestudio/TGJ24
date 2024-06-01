@@ -8,8 +8,6 @@ public class AppBase : MonoBehaviour
     public GameObject ScreenObject;
     protected virtual void Awake()
     {
-        // 默认关闭
-        Close();
     }
 
     protected virtual void Update()
@@ -21,13 +19,19 @@ public class AppBase : MonoBehaviour
     
     [ReadOnly]
     public bool isOpening = false;
+    [ReadOnly]
+    public bool hasOpened = false; 
     public Vector3 CenterPos = new Vector3(960, 540);
     
     public virtual void Open() 
     {
         if (isOpening) return;
+        if (hasOpened) return;
+        hasOpened = true;
         ScreenObject.SetActive(true);
         StartCoroutine(IEOpenOrClose(0.1f, 1.0f, transform.position, CenterPos));
+        // Change Header Text Color
+        MobileManager.instance.OnOpenApp();
     }
 
     IEnumerator IEOpenOrClose(float startScale, float endScale, Vector3 startPos, Vector3 targetPos, System.Action endAction = null, float openTime = 0.15f)
@@ -57,8 +61,13 @@ public class AppBase : MonoBehaviour
     public virtual void Close()
     {
         if (isOpening) return;
+        if (!hasOpened) return;
+        hasOpened = false;
         StartCoroutine(IEOpenOrClose(1.0f, 0.1f, CenterPos, transform.position, ()=>{
             ScreenObject.SetActive(false);
         }));
+
+        // Change Header Text Color
+        MobileManager.instance.OnCloseApp();
     }
 }
