@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AppShoppingOrder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    String shop;
+    String good;
+    String price;
+    String address;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    Text ShopText;
+    [SerializeField]
+    Text GoodText;
+    [SerializeField]
+    Text PriceText;
+    [SerializeField]
+    Text AddressText;
+
+    public void SetData(String shop, String good, String price, String address)
     {
-        
+        this.shop = shop;
+        this.good = good;
+        this.price = price;
+        this.address = address;
+
+        ShopText.text = shop;
+        GoodText.text = good;
+        PriceText.text = "￥" + price;
+        AddressText.text = address;
     }
 }
