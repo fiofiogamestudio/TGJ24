@@ -13,10 +13,20 @@ public class MobileManager : MonoBehaviour
     public Text Header5G;
     [Header("App Layout")]
     public Transform AppLayout;
+    [Header("Home Button")]
+    public Button HomeButton;
     void Awake()
     {
         if (instance == null) instance = this;
+        HomeButton.onClick.AddListener(()=>{
+            var apps = GameObject.FindObjectsOfType<AppBase>();
+            foreach (var app in apps)
+            {
+                app.Close();
+            }
+        });
     }
+
 
     public void OnOpenApp()
     {

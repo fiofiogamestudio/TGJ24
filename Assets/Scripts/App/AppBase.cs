@@ -12,13 +12,13 @@ public class AppBase : MonoBehaviour
 
     protected virtual void Start()
     {
-        
+
     }
 
     protected virtual void Update()
     {
         // 测试
-        if (Input.GetKeyDown(KeyCode.W)) Close();
+        // if (Input.GetKeyDown(KeyCode.W)) Close();
     }
     
     
