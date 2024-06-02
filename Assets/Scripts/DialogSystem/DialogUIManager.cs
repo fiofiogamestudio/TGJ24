@@ -196,6 +196,12 @@ public class DialogUIManager : MonoBehaviour
 
     public void LoadDialog(int id)
     {
+        if (id == 0) 
+        {
+            CloseDialog();
+            return;
+        }
+        
         DialogHolder.DialogBase dialog = DialogHolder.instance.GetDialog(id);
         if (dialog != null)
         {

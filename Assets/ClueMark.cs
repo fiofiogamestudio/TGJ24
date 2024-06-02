@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(AppBase))]
-public class AppController : MonoBehaviour, IPointerClickHandler
+public class ClueMark : MonoBehaviour, IPointerClickHandler
 {
+    public int clueIndex = 0;
+    
     public void OnPointerClick(PointerEventData eventData)
     {
         // 进行射线检测
@@ -16,11 +17,12 @@ public class AppController : MonoBehaviour, IPointerClickHandler
         if (result.gameObject == gameObject)
         {
             // 处理点击事件
-            if (GameManager.instance.interactMode == GameInteractMode.Interact)
-            {
-                this.GetComponent<AppBase>().Open();
-                Debug.Log("Clicked on " + gameObject.name);
-            }
+            if (GameManager.instance.interactMode == GameInteractMode.Clue) triggerClue();
         }
+    }
+
+    void triggerClue()
+    {
+        DialogUIManager.instance.LoadDialog(clueIndex);
     }
 }
