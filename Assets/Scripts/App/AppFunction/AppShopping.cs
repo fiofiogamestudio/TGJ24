@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class AppShopping : AppBase
 {
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
     [SerializeField]
     List<String> shops;
     [SerializeField]
