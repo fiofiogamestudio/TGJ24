@@ -8,7 +8,7 @@ public class AppNote : AppBase
     public GameObject notes;
     public List<GameObject> gameObjects;
     public List<GameObject> usersAnswer;
-    private List<string> correctAnswer = new (new string[] { "answer1", "answer2", "answer3" });
+    private List<string> correctAnswer = new (new string[] { "0530", "小小", "古湖区香园街道253号" });
     private int currentMode = 0;
     public GameObject incorrectInfo;
 
