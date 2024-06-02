@@ -1,0 +1,75 @@
+{
+    "infos": [
+      {
+        "id": 1,
+        "number": "+8613800138000",
+        "day": "2024-06-02",
+        "dayOfWeek": "星期六",
+        "timeOfDay": "15:30:45",
+        "previewType": 0,
+        "content": "欢迎使用我们的新聊天应用！",
+        "clueToken": "initial-message"
+      },
+      {
+        "id": 2,
+        "number": "+8613900139000",
+        "day": "2024-06-03",
+        "dayOfWeek": "星期日",
+        "timeOfDay": "08:15:20",
+        "previewType": 1,
+        "content": "别忘了检查今天的日程安排。",
+        "clueToken": "reminder"
+      },
+      {
+        "id": 3,
+        "number": "+8613800138000",
+        "day": "2024-06-03",
+        "dayOfWeek": "星期日",
+        "timeOfDay": "12:00:00",
+        "previewType": 2,
+        "content": "今天午餐别迟到哦！",
+        "clueToken": "lunch-reminder"
+      },
+      {
+        "id": 4,
+        "number": "+8615000150000",
+        "day": "2024-06-04",
+        "dayOfWeek": "星期一",
+        "timeOfDay": "17:42:10",
+        "previewType": 2,
+        "content": "下午6点和团队有个会议。",
+        "clueToken": "meeting-reminder"
+      },
+      {
+        "id": 5,
+        "number": "+8613900139000",
+        "day": "2024-06-05",
+        "dayOfWeek": "星期二",
+        "timeOfDay": "09:45:00",
+        "previewType": 0,
+        "content": "请确认你的报告已经完成。",
+        "clueToken": "report-check"
+      },
+      {
+        "id": 6,
+        "number": "+8615600156000",
+        "day": "2024-06-06",
+        "dayOfWeek": "星期三",
+        "timeOfDay": "11:30:10",
+        "previewType": 1,
+        "content": "新项目明天开始。",
+        "clueToken": "project-start"
+      },
+      {
+        "id": 7,
+        "number": "+8613800138000",
+        "day": "2024-06-07",
+        "dayOfWeek": "星期四",
+        "timeOfDay": "18:00:00",
+        "previewType": 2,
+        "content": "今晚的聚会不要忘记。",
+        "clueToken": "party-reminder"
+      }
+    ]
+  }
+  

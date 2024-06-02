@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 8304243275286946121}
   - component: {fileID: 8130001077623065524}
   - component: {fileID: 3518548028013472523}
+  - component: {fileID: -3700982862440919094}
   m_Layer: 5
   m_Name: Message Item
   m_TagString: Untagged
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2261827511829907378}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
   m_Name: 
@@ -172,6 +173,24 @@ MonoBehaviour:
   m_EffectColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 0.5}
   m_EffectDistance: {x: 0, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &-3700982862440919094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261827511829907378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b4b9312ef354647a826b17c2ec5d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 
+  timeStr: 
+  content: 
+  numberText: {fileID: 8761420939712574723}
+  timeText: {fileID: 2918497515735020919}
+  contentText: {fileID: 7349925586683093423}
 --- !u!1 &4515360082185176408
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +203,7 @@ GameObject:
   - component: {fileID: 8608981053525368860}
   - component: {fileID: 2918497515735020919}
   m_Layer: 5
-  m_Name: Message Time
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,8 +226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 210, y: 26.600025}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 184.36255, y: 26.600025}
+  m_SizeDelta: {x: 108.7251, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8608981053525368860
 CanvasRenderer:
@@ -245,7 +264,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -264,7 +283,7 @@ GameObject:
   - component: {fileID: 3257019176697787257}
   - component: {fileID: 8761420939712574723}
   m_Layer: 5
-  m_Name: Message Number
+  m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,7 +363,7 @@ GameObject:
   - component: {fileID: 328856877542814122}
   - component: {fileID: 7349925586683093423}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

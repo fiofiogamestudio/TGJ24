@@ -10,6 +10,11 @@ public class AppBase : MonoBehaviour
     {
     }
 
+    protected virtual void Start()
+    {
+        
+    }
+
     protected virtual void Update()
     {
         // 测试

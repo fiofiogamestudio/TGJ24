@@ -104,6 +104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScreenObject: {fileID: 4215801125599437999}
+  isOpening: 0
+  hasOpened: 0
+  CenterPos: {x: 960, y: 540, z: 0}
 --- !u!1 &4215801125599437999
 GameObject:
   m_ObjectHideFlags: 0
