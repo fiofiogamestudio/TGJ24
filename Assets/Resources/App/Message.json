@@ -8,7 +8,7 @@
         "timeOfDay": "15:30:45",
         "previewType": 0,
         "content": "欢迎使用我们的新聊天应用！",
-        "clueToken": "initial-message"
+        "clueId": 1
       },
       {
         "id": 2,
@@ -18,7 +18,7 @@
         "timeOfDay": "08:15:20",
         "previewType": 1,
         "content": "别忘了检查今天的日程安排。",
-        "clueToken": "reminder"
+        "clueId": 1
       },
       {
         "id": 3,
@@ -28,7 +28,7 @@
         "timeOfDay": "12:00:00",
         "previewType": 2,
         "content": "今天午餐别迟到哦！",
-        "clueToken": "lunch-reminder"
+        "clueId": 1
       },
       {
         "id": 4,
@@ -38,7 +38,7 @@
         "timeOfDay": "17:42:10",
         "previewType": 2,
         "content": "下午6点和团队有个会议。",
-        "clueToken": "meeting-reminder"
+        "clueId": 1
       },
       {
         "id": 5,
@@ -48,7 +48,7 @@
         "timeOfDay": "09:45:00",
         "previewType": 0,
         "content": "请确认你的报告已经完成。",
-        "clueToken": "report-check"
+        "clueId": 1
       },
       {
         "id": 6,
@@ -58,7 +58,7 @@
         "timeOfDay": "11:30:10",
         "previewType": 1,
         "content": "新项目明天开始。",
-        "clueToken": "project-start"
+        "clueId": 1
       },
       {
         "id": 7,
@@ -68,7 +68,7 @@
         "timeOfDay": "18:00:00",
         "previewType": 2,
         "content": "今晚的聚会不要忘记。",
-        "clueToken": "party-reminder"
+        "clueId": 1
       }
     ]
   }
