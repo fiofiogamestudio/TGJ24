@@ -56,6 +56,7 @@ public class MessageItem : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        referenceApp.SelectItem(this);
         throw new System.NotImplementedException();
     }
 }

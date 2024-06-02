@@ -49,5 +49,5 @@ public class MessageInfo
     public string timeOfDay; // 几分几秒
     public int previewType; // 预览方式（配置省的计算） 0 日期 1 星期几 2 时间 3 昨天
     public string content; 
-    public string clueToken; // 线索的标签
+    public int clueId; // 线索的标签 指向对话
 }
