@@ -161,7 +161,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.99919283}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -405,7 +405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0005038961}
+  m_AnchoredPosition: {x: 0, y: 0.00012853822}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1596979913049652211
@@ -870,27 +870,47 @@ MonoBehaviour:
   hasOpened: 0
   CenterPos: {x: 960, y: 540, z: 0}
   shops:
-  - "\u5609\u534E\u624D\u6C14\u65D7\u8230\u5E97"
+  - "\u4FEE\u52FE\u4E4B\u5BB6"
+  - "\u5927\u9EA6\u7F51"
+  - "\u4FEE\u52FE\u4E4B\u5BB6"
+  - "\u53E4\u6E56\u963F\u59E8"
+  - "\u56DB\u70B9\u65D7\u8230\u5E97"
   - "HAIR\u54C1\u724C\u5E97"
   - "yisong\u65D7\u8230\u5E97"
   - "sanhu\u670D\u9970\u65D7\u8230\u5E97"
   goods:
-  - "2024\u5E74\u65B0\u6B3E\u81EA\u62CD\u6746\u624B\u673A\u901A\u7528"
+  - "\u5C0F\u72D7\u9AA8\u5934\u72B6\u73A9\u5177"
+  - "TripleMoon \u53E4\u6E56\u7AD9 \u5DE1\u56DE\u6F14\u5531\u4F1A"
+  - "\u7CBE\u54C1\u72D7\u7CAE"
+  - "\u8349\u8393\u68A8\u5B50\u5976\u6614"
+  - "8\u5934\u6309\u6469\u4EEA"
   - "\u7CBE\u534E\u6DB2\u4FEE\u62A4\u6539\u5584\u8131\u53D1"
   - "\u4EBA\u4F53\u5DE5\u5B66\u6905"
   - "\u5C0F\u6E05\u65B0\u540A\u5E26\u86CB\u7CD5\u8FDE\u8863\u88D9"
   prices:
-  - 16.80
+  - 105.00
+  - 688.00
+  - 249.00
+  - 18.00
+  - 2063.00
   - 88.00
   - 399.00
   - 118.00
   addresses:
-  - "\u5B9D\u80FD\u57CE\u82B1\u56ED\u897F\u533A"
+  - "\u53E4\u6E56\u533A\u9999\u56ED\u8857\u9053253\u53F7"
+  - "\u53E4\u6E56\u533A\u56DB\u5B63\u79D1\u6280\u56EDD\u680B"
+  - "\u53E4\u6E56\u533A\u9999\u56ED\u8857\u9053253\u53F7"
+  - "\u53E4\u6E56\u533A\u56DB\u5B63\u79D1\u6280\u56EDD\u680B"
+  - "\u53E4\u6E56\u533A\u9999\u56ED\u8857\u9053253\u53F7"
   - "\u53E4\u6E56\u533A\u9999\u56ED\u8857\u9053253\u53F7"
   - "\u56DB\u5B63\u79D1\u6280\u56ED"
   - "\u53E4\u6E56\u533A\u9999\u56ED\u8857\u9053253\u53F7"
   goodIcons:
   - {fileID: 21300000, guid: bf2d8c14146e52e488c1983490b9bfb7, type: 3}
+  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
+  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
+  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
+  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
   - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
   - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
   - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
