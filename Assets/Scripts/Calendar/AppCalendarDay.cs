@@ -14,6 +14,8 @@ public class AppCalendarDay : MonoBehaviour
     GameObject TodayMark;
     [SerializeField]
     GameObject EventMark;
+    [SerializeField]
+    Button button;
     #endregion
 
     public void SetRoot(AppCalendar root)
@@ -38,6 +40,16 @@ public class AppCalendarDay : MonoBehaviour
     public void SetEventMark(bool hasEvent)
     {
         EventMark.SetActive(hasEvent);
+    }
+
+    public void DisableClick()
+    {
+        button.interactable = false;
+    }
+
+    public void AbleClick()
+    {
+        button.interactable = true;
     }
     #endregion
 

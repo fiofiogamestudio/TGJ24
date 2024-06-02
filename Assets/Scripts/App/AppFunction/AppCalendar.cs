@@ -61,6 +61,10 @@ public class AppCalendar : AppBase
     #region UI控制函数
     public void ShowDetail(int month, int day)
     {
+        if (month == 0 || day == 0)
+        {
+            return;
+        }
         detail.SetActive(true);
         detailTitle.text = month + "月" + day + "日";
         detailContent.text = "这是" + month + "月" + day + "日的内容";
@@ -82,6 +86,7 @@ public class AppCalendar : AppBase
     {
         foreach (var day in days[row])
         {
+            day.DisableClick();
             day.SetDayText("");
             day.SetTodayMark(false);
             day.SetEventMark(false);
@@ -102,6 +107,7 @@ public class AppCalendar : AppBase
         days[row][col].SetTodayMark(isToday);
         days[row][col].SetEventMark(hasEvent);
         days[row][col].SetData(month, day);
+        days[row][col].AbleClick();
     }
 
     void SetDayEvent(int row, int col)
