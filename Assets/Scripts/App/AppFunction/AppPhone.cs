@@ -41,6 +41,8 @@ public class AppPhone : AppBase
         newObj.SetParent(content);
         newObj.SetAsFirstSibling();
         newObj.GetChild(0).GetComponent<Text>().text = number;
+        newObj.GetChild(0).GetComponent<Text>().color = Color.black;
+        newObj.GetChild(1).GetComponent<Text>().text = "2024年6月3日10:00";
         //查询现在的时间并设置给newObj.GetChild(1).GetComponent<Text>().text
     }
 
