@@ -43,6 +43,46 @@
             "dialogCallback": null,
             "faceID": 0,
             "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 2001,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "并没有什么能说的",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 2002,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "并没有什么能说的",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 2003,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "并没有什么能说的",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 2004,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "并没有什么能说的",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 0
         }
     ]
 }
