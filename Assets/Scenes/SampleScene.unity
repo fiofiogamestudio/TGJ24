@@ -3127,6 +3127,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1754067695}
     m_Modifications:
+    - target: {fileID: 1671801033795873356, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671801033795873356, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824103577127629591, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824103577127629591, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824103577127629591, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824103577127629591, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933863293999858959, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933863293999858959, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933863293999858959, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567591070129488652, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000593612
+      objectReference: {fileID: 0}
     - target: {fileID: 8141051787094394964, guid: 94056f782a5642647862457a0dc89e4f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

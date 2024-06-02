@@ -13,6 +13,8 @@ public class AppShopping : AppBase
     List<String> prices;
     [SerializeField]
     List<String> addresses;
+    [SerializeField]
+    List<Sprite> goodIcons;
 
     [SerializeField]
     GameObject orderPrefab;
@@ -26,7 +28,7 @@ public class AppShopping : AppBase
             // 生成一个订单
             GameObject order = Instantiate(orderPrefab, prefabHolder.transform);
             AppShoppingOrder orderScript = order.GetComponent<AppShoppingOrder>();
-            orderScript.SetData(shops[i], goods[i], prices[i], addresses[i]);
+            orderScript.SetData(shops[i], goods[i], prices[i], addresses[i], goodIcons[i]);
         }
     }
 }

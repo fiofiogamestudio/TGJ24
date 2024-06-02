@@ -6,11 +6,6 @@ using UnityEngine.UI;
 
 public class AppShoppingOrder : MonoBehaviour
 {
-    String shop;
-    String good;
-    String price;
-    String address;
-
     [SerializeField]
     Text ShopText;
     [SerializeField]
@@ -19,17 +14,15 @@ public class AppShoppingOrder : MonoBehaviour
     Text PriceText;
     [SerializeField]
     Text AddressText;
+    [SerializeField]
+    Image IconImage;
 
-    public void SetData(String shop, String good, String price, String address)
+    public void SetData(String shop, String good, String price, String address, Sprite icon)
     {
-        this.shop = shop;
-        this.good = good;
-        this.price = price;
-        this.address = address;
-
         ShopText.text = shop;
         GoodText.text = good;
         PriceText.text = "￥" + price;
         AddressText.text = address;
+        IconImage.sprite = icon;
     }
 }
