@@ -9,6 +9,7 @@ public class AppPhone : AppBase
     public GameObject deleteButton;
     public GameObject numberArea;
     private int currentMode = 0;
+    public Transform content;
 
     protected override void Awake()
     {
@@ -19,12 +20,28 @@ public class AppPhone : AppBase
     {
         if (number == "")
         {
-            Debug.Log("call " + numberArea.GetComponent<Text>().text);
+            string text = numberArea.GetComponent<Text>().text;
+            if (text == "")
+            {
+                return;
+            }
+            InsertHistory(text);
             numberArea.GetComponent<Text>().text = "";
+            deleteButton.SetActive(false);
             return;
         }
         numberArea.GetComponent<Text>().text += number;
         deleteButton.SetActive(true);
+    }
+
+    private void InsertHistory(string number)
+    {
+        Transform obj = content.GetChild(0);
+        Transform newObj = Instantiate(obj);
+        newObj.SetParent(content);
+        newObj.SetAsFirstSibling();
+        newObj.GetChild(0).GetComponent<Text>().text = number;
+        //查询现在的时间并设置给newObj.GetChild(1).GetComponent<Text>().text
     }
 
     public void deleteButtonOnClick()
