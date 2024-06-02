@@ -7106,7 +7106,7 @@ PrefabInstance:
     - target: {fileID: 5960789937809750605, guid: 3ba3ef9ae252de44c80cef71b0a6d9dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9ced1844625159846a55eb00131ddff9, type: 3}
+      objectReference: {fileID: 21300000, guid: 16a4c8e303433d14fb6b5fad9d5a7704, type: 3}
     - target: {fileID: 7991211423557855449, guid: 3ba3ef9ae252de44c80cef71b0a6d9dc, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
