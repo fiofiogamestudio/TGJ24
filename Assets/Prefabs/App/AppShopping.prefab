@@ -405,8 +405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00012853822}
-  m_SizeDelta: {x: 0, y: 300}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1596979913049652211
 MonoBehaviour:
@@ -916,3 +916,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
   orderPrefab: {fileID: 5556893306109416618, guid: bf5fe8f59ca3e6b479b6503907e93748, type: 3}
   prefabHolder: {fileID: 4981325389296501465}
+  scrollView: {fileID: 7567591070129488652}

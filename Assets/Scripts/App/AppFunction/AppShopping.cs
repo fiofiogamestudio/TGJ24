@@ -21,6 +21,9 @@ public class AppShopping : AppBase
     [SerializeField]
     GameObject prefabHolder;
 
+    [SerializeField]
+    RectTransform scrollView;
+
     void Start()
     {
         for (int i = 0; i < shops.Count; i++)
@@ -30,5 +33,9 @@ public class AppShopping : AppBase
             AppShoppingOrder orderScript = order.GetComponent<AppShoppingOrder>();
             orderScript.SetData(shops[i], goods[i], prices[i], addresses[i], goodIcons[i]);
         }
+
+        // 计算scrollView的高度
+        float height = shops.Count * 180 + shops.Count * 2 - 2;
+        scrollView.sizeDelta = new Vector2(scrollView.sizeDelta.x, height);
     }
 }
