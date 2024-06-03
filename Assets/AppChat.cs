@@ -29,6 +29,12 @@ public class AppChat : AppBase
         InitChatToken();
     }
 
+    public override void Close()
+    {
+        base.Close();
+        ShowOrHideDetail(false);
+    }
+
     public Image newTip;
     public void TipNew(string tagName)
     {
