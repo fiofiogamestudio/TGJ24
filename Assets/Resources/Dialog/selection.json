@@ -39,20 +39,20 @@
     {
       "selectionID": 200711,
       "nextDialogID": 0,
-      "content": "错误选项",
+      "content": "情感纠纷",
       "selectionCallback": "add_chat, Z, 71, 2004"
     },
     {
       "selectionID": 200712,
       "nextDialogID": 0,
-      "content": "正确选项",
+      "content": "公司关系",
       "selectionCallback": "add_chats, Z, 2, 72, 8, 2008"
     },
     {
       "selectionID": 200713,
       "nextDialogID": 0,
-      "content": "错误选项",
-      "selectionCallback": "add_chat, Z, 71, 2004"
+      "content": "心理压力",
+      "selectionCallback": "add_chat, Z, 73, 2004"
     },
     {
       "selectionID": 200714,
