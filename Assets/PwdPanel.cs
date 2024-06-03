@@ -11,7 +11,7 @@ public class PwdPanel : MonoBehaviour
     void Awake()
     {
         ConfirmButton.onClick.AddListener(()=>{
-            if (inputField.text != "0530")
+            if (inputField.text == "0530")
             {
                 // 正确
                 DialogUIManager.instance.LoadDialog(20082);

@@ -741,6 +741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portraitImage: {fileID: 6423378720125406673}
   contentText: {fileID: 1124410812449073583}
+  TimeText: {fileID: 3963703337486721329}
 --- !u!114 &3943573923843718725
 MonoBehaviour:
   m_ObjectHideFlags: 0

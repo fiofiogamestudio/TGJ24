@@ -5258,7 +5258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1885129777376249603, guid: e94164095d10c664d8054e8eccf6e813, type: 3}
       propertyPath: Startid
-      value: 0
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 1885129777376249603, guid: e94164095d10c664d8054e8eccf6e813, type: 3}
       propertyPath: SelectionPanel

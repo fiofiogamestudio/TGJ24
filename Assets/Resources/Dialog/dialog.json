@@ -46,6 +46,46 @@
         },
         {
             "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 101,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "5月30日，金瑞斯咨询公司员工张丝奇坠楼事件引起轰动",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 102
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 102,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "警方已经接管现场调查，一切线索都指向这是一起自杀事件",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 103
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 103,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "你作为近年来声名鹊起的新星侦探，受死者家属委托调查其他可能",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 104
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 104,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "然而，唯一能接触到的只有一部手机",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
             "dialogID": 1001,
             "dialogType": 0,
             "holderID": 2,
