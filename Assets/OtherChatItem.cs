@@ -10,7 +10,7 @@ public class OtherChatItem : MonoBehaviour
     public Image portraitImage;
     public TextMeshProUGUI contentText;
 
-    public void InitView(Sprite sprite, string content)
+    public void InitView(Sprite sprite, string content, string time)
     {
         this.portraitImage.sprite = sprite;
         this.contentText.text = content;

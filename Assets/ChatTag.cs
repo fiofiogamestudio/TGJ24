@@ -28,10 +28,18 @@ public class ChatTag : MonoBehaviour, IPointerClickHandler
     public void Init(ChatRecord record, AppChat reference)
     {
         this.chatName = record.name;
-        this.sprite = PortraitHolder.instance.getPortrait(this.chatName);
+        this.sprite = PortraitHolder.instance.GetPortrait(this.chatName);
         if (record.itemList.Count != 0)
         {
-            this.content = record.itemList[0].content;
+            for (int i = record.itemList.Count - 1; i >= 0; i--)
+            {
+                this.content = "";
+                if (record.itemList[i].show)
+                {
+                    this.content = record.itemList[i].content;
+                    break;
+                }
+            }
         }
         else
         {
@@ -45,6 +53,12 @@ public class ChatTag : MonoBehaviour, IPointerClickHandler
 
         refreshView();
         
+    }
+
+    public void Reload()
+    {
+        ChatRecord record = ChatHolder.instance.GetChat(this.chatName);
+        Init(record, this.referenceApp);
     }
 
 

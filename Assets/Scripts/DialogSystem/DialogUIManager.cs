@@ -300,14 +300,14 @@ public class DialogUIManager : MonoBehaviour
                 int nextDialogID = dialog.nextDialogID;
                 if (nextDialogID <= 0)
                 {
-                    executeEffect(CurrentCallback);
+                    ExecuteEffect(CurrentCallback);
                     CloseDialog();
                 }
                 else
                 {
                     // Handle dialog callback
                     // handleEvent
-                    executeEffect(CurrentCallback);
+                    ExecuteEffect(CurrentCallback);
                     LoadDialog(nextDialogID);
                 }
                 return;
@@ -327,7 +327,7 @@ public class DialogUIManager : MonoBehaviour
         }
         int nextIndex = (index + 1) % count;
         int nextId = CurrentQuery.dialogList[nextIndex];
-        executeEffect(CurrentCallback);
+        ExecuteEffect(CurrentCallback);
         LoadDialog(nextId);
     }
 
@@ -379,20 +379,20 @@ public class DialogUIManager : MonoBehaviour
             {
                 LoadDialog(dialogPackage.successNextDialogID);
                 Debug.Log("success call " + dialogPackage.successCallback);
-                executeEffect(dialogPackage.successCallback);
+                ExecuteEffect(dialogPackage.successCallback);
             }
             else
             {
                 LoadDialog(dialogPackage.failedNextDialogID);
                 Debug.Log("failed call " + dialogPackage.failedCallback);
-                executeEffect(dialogPackage.failedCallback);
+                ExecuteEffect(dialogPackage.failedCallback);
             }
         }
     }
 
     private List<string> temp_args = new List<string>();
 
-    private void executeEffect(string effect)
+    public void ExecuteEffect(string effect)
     {
         if (effect == null || effect.Length == 0) return;
         Debug.Log("execute effect: " + effect);
@@ -458,6 +458,47 @@ public class DialogUIManager : MonoBehaviour
         // TODO
     }
 
+
+
+    // Custom Function
+    private void add_chat()
+    {
+        string chatName = temp_args[0];
+        int chatItemId = System.Convert.ToInt32(temp_args[1]);
+        int chatTarget = System.Convert.ToInt32(temp_args[2]);
+
+        // Debug.Log($"add chat {chatName} {chatItemId}");
+        ChatHolder.instance.ShowChat(chatName, chatItemId, chatTarget);
+        AppChat.instance.RefreshChat();
+    }
+
+    private void add_chats()
+    {
+        string chatName = temp_args[0];
+        int chatCount = System.Convert.ToInt32(temp_args[1]);
+        int chatTarget = System.Convert.ToInt32(temp_args[2 + chatCount]);
+        for (int i = 2; i < 2 + chatCount; i++)
+        {
+            int chatItemId = System.Convert.ToInt32(temp_args[i]);
+            ChatHolder.instance.ShowChat(chatName, chatItemId, chatTarget);
+        }
+        AppChat.instance.RefreshChat();
+
+    }
+
+    private void set_chat_target()
+    {
+        string chatName = temp_args[0];
+        int chatTarget = System.Convert.ToInt32(temp_args[1]);
+
+        ChatHolder.instance.SetChatTarget(chatName, chatTarget);
+        AppChat.instance.RefreshChat();
+    }
+
+    private void input_pwd()
+    {
+        GameManager.instance.OpenPwdPanel();
+    }
 
 
 

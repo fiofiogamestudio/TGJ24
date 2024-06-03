@@ -13,6 +13,19 @@ public class GameManager : MonoBehaviour
 
 
     public GameInteractMode interactMode = GameInteractMode.Interact;
+
+
+    public GameObject PwdPanel;
+
+    public void OpenPwdPanel()
+    {
+        PwdPanel.gameObject.SetActive(true);
+    }
+
+    public void ClosePwdPanel()
+    {
+        PwdPanel.gameObject.SetActive(false);
+    }
     
 }
 

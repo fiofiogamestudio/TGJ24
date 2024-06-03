@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,8 +43,8 @@ public class AppPhone : AppBase
         newObj.SetAsFirstSibling();
         newObj.GetChild(0).GetComponent<Text>().text = number;
         newObj.GetChild(0).GetComponent<Text>().color = Color.black;
-        newObj.GetChild(1).GetComponent<Text>().text = "2024Äê6ÔÂ3ÈÕ10:00";
-        //²éÑ¯ÏÖÔÚµÄÊ±¼ä²¢ÉèÖÃ¸ønewObj.GetChild(1).GetComponent<Text>().text
+        newObj.GetChild(1).GetComponent<Text>().text = "2024ï¿½ï¿½6ï¿½ï¿½3ï¿½ï¿½10:00";
+        //ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ä²¢ï¿½ï¿½ï¿½Ã¸ï¿½newObj.GetChild(1).GetComponent<Text>().text
     }
 
     public void deleteButtonOnClick()
@@ -65,5 +66,28 @@ public class AppPhone : AppBase
         gameObjects[currentMode].SetActive(false);
         gameObjects[mode].SetActive(true);
         currentMode = mode;
+    }
+
+    public bool hasRightDial = false;
+    public void ClickDialButton()
+    {
+        string number = numberArea.GetComponent<Text>().text;
+        if (number == "15107611461" || true)
+        {
+            if (!hasRightDial)
+            {
+                DialogUIManager.instance.ExecuteEffect("add_chat, Z, 4, 2005");
+                DialogUIManager.instance.LoadDialog(3001);
+                hasRightDial = true;
+            }
+            else
+            {
+                DialogUIManager.instance.LoadDialog(3011);
+            }
+        }
+        else
+        {
+            DialogUIManager.instance.LoadDialog(3011);
+        }
     }
 }

@@ -32,6 +32,22 @@ public class MessageHolder : MonoBehaviour
         }
         return null;
     }
+
+    public List<MessageInfo> GetAllMessage(string number)
+    {
+        List<MessageInfo> resultList = new List<MessageInfo>();
+        foreach (var message in messageList)
+        {
+            // Debug.Log(message.number + " " + number + " " + (message.number == number)); 
+            if (message.number == number)
+            {
+                resultList.Add(message);
+                // Debug.Log("add message");
+            }
+        }
+        // Debug.Log(resultList.Count);
+        return resultList;
+    }
 }
 
 public class MessageWrapper

@@ -55,6 +55,9 @@ public class MobileManager : MonoBehaviour
 
             var appController = child.GetComponent<AppController>();
             appController.enabled = flag;
+
+            var ui = child.GetComponent<Image>();
+            ui.raycastTarget = flag;
         }
     }
 

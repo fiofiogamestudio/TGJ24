@@ -219,66 +219,73 @@
               },
               {
                 "id": 4,
-                "show": true,
+                "show": false,
                 "isMe": false,
-                "content": "你是谁？",
-                "time": "2024/06/03 17:29"
+                "content": "你是谁？为什么会有她的手机",
+                "time": "2024/06/03 10:00"
               },
               {
                 "id": 5,
-                "show": true,
+                "show": false,
+                "isMe": true,
+                "content": "我是死者的家属",
+                "time": "2024/06/03 10:05"
+              },
+              {
+                "id": 5,
+                "show": false,
                 "isMe": false,
-                "content": "这手机怎么会在你这？",
-                "time": "2024/06/03 17:30"
+                "content": "原来是这样，请节哀",
+                "time": "2024/06/03 10:05"
               },
               {
                 "id": 6,
-                "show": true,
+                "show": false,
                 "isMe": true,
-                "content": "选项1：我是侦探，在调查这件事 选项2：我是死者家人",
-                "time": "2024/06/03 17:31"
+                "content": "我在调查她的死因",
+                "time": "2024/06/03 10:05"
               },
               {
-                "id": 7,
-                "show": true,
+                "id": 61,
+                "show": false,
                 "isMe": false,
-                "content": "原来是这样，请节哀",
-                "time": "2024/06/03 17:32"
+                "content": "那你调查出了什么",
+                "time": "2024/06/03 10:05"
+              },
+              {
+                "id": 71,
+                "show": false,
+                "isMe": true,
+                "content": "我觉得应该是...（错误答案）",
+                "time": "2024/06/03 10:05"
+              },
+              {
+                "id": 72,
+                "show": false,
+                "isMe": true,
+                "content": "我觉得应该是和公司有纠纷",
+                "time": "2024/06/03 10:05"
               },
               {
                 "id": 8,
-                "show": true,
-                "isMe": true,
-                "content": "选项1：你是谁 选项2：其实我是侦探",
-                "time": "2024/06/03 17:33"
+                "show": false,
+                "isMe": false,
+                "content": "是的，她收集了一些上司的证据，很可能因为这个遇害。她之前似乎在破解一个密码，你能告诉我吗？",
+                "time": "2024/06/03 10:05"
               },
               {
                 "id": 9,
                 "show": false,
-                "isMe": false,
-                "content": "那你调查出什么了？",
-                "time": "2024/06/03 17:34"
+                "isMe": true,
+                "content": "密码是*****",
+                "time": "2024/06/03 10:05"
               },
               {
                 "id": 10,
-                "show": true,
-                "isMe": true,
-                "content": "选项1：死者生活不顺 选项2：死者被公司的人威胁",
-                "time": "2024/06/03 17:35"
-              },
-              {
-                "id": 11,
-                "show": true,
+                "show": false,
                 "isMe": false,
-                "content": "我这里有一些能帮到你的东西，但是我需要一个密码",
-                "time": "2024/06/03 17:36"
-              },
-              {
-                "id": 12,
-                "show": true,
-                "isMe": false,
-                "content": "你手机中的备忘录应该有密码",
-                "time": "2024/06/03 17:37"
+                "content": "是正确的！",
+                "time": "2024/06/03 10:05"
               }
             ],
             "chatTarget": 2004

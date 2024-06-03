@@ -14,7 +14,7 @@ public class PortraitHolder : MonoBehaviour
 
     public Sprite defaultPortrait;
 
-    public Sprite getPortrait(string name)
+    public Sprite GetPortrait(string name)
     {
         foreach (var mapping in portraitMappingList)
         {

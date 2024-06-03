@@ -36,10 +36,20 @@
         },
         {
             "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 4,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "测试添加对话",
+            "dialogCallback": "add_chat, Z, 4, 2004",
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
             "dialogID": 1001,
             "dialogType": 0,
             "holderID": 2,
-            "content": "这是一条线索",
+            "content": "这是一条短信，打开看看具体信息吧",
             "dialogCallback": null,
             "faceID": 0,
             "nextDialogID": 0
@@ -80,6 +90,138 @@
             "dialogType": 0,
             "holderID": 2,
             "content": "并没有什么能说的",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSelection, Assembly-CSharp",
+            "dialogID": 2005,
+            "dialogType": 1,
+            "holderID": 2,
+            "content": "你思考怎样向对方解释",
+            "dialogCallback": null,
+            "faceID": 4,
+            "selectionList": [
+                20051,
+                20052,
+                20053
+            ]
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 2006,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "对方表示安慰",
+            "dialogCallback": "add_chat, Z, 51, 20061",
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSelection, Assembly-CSharp",
+            "dialogID": 20061,
+            "dialogType": 1,
+            "holderID": 2,
+            "content": "你思考怎样向对方解释",
+            "dialogCallback": null,
+            "faceID": 4,
+            "selectionList": [
+                20052,
+                20053
+            ]
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 2007,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "对方很快回复",
+            "dialogCallback": "add_chat, Z, 61, 20071",
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSelection, Assembly-CSharp",
+            "dialogID": 20071,
+            "dialogType": 1,
+            "holderID": 2,
+            "content": "你觉得原因可能是（这个选项很重要，请谨慎选择）",
+            "dialogCallback": null,
+            "faceID": 4,
+            "selectionList": [
+                200711,
+                200712,
+                200713,
+                200714
+            ]
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 2008,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "请你告诉她密码",
+            "dialogCallback": "input_pwd",
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 20081,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "感觉这个密码应该不对",
+            "dialogCallback": "",
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 20082,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "你发送了这个密码",
+            "dialogCallback": "add_chats, Z, 2, 9, 10, 2004",
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 3001,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "你拨打了这个电话...",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 3002
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 3002,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "电话接通了，但是对面并没有发出声音，而且很快挂断了",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 3003
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 3003,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "你的【聊天软件】收到了一条新信息",
+            "dialogCallback": null,
+            "faceID": 0,
+            "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSequece, Assembly-CSharp",
+            "dialogID": 3011,
+            "dialogType": 0,
+            "holderID": 2,
+            "content": "感觉这个电话并没有什么特殊，还是不要打了",
             "dialogCallback": null,
             "faceID": 0,
             "nextDialogID": 0

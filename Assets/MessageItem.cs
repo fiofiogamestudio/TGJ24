@@ -56,7 +56,7 @@ public class MessageItem : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        referenceApp.SelectItem(this);
-        throw new System.NotImplementedException();
+        if (GameManager.instance.interactMode == GameInteractMode.Interact)
+            referenceApp.SelectItem(this);
     }
 }

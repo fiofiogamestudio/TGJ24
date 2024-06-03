@@ -30,6 +30,45 @@ public class ChatHolder : MonoBehaviour
             );
         }
     }
+
+    public ChatRecord GetChat(string chatName)
+    {
+        foreach (var record in ChatRecordList)
+        {
+            if (record.name == chatName) return record;
+        }
+        return null;
+    }
+
+
+    public void ShowChat(string chatName, int chatItemId, int chatTarget)
+    {
+        for (int i = 0; i < ChatRecordList.Count; i++)
+        {
+            if (ChatRecordList[i].name == chatName)
+            {
+                for (int j = 0; j < ChatRecordList[i].itemList.Count; j++)
+                {
+                    if (ChatRecordList[i].itemList[j].id == chatItemId)
+                    {
+                        ChatRecordList[i].itemList[j].show = true;
+                        ChatRecordList[i].chatTarget = chatTarget;
+                    }
+                }
+            }
+        }
+    }
+
+    public void SetChatTarget(string chatName, int chatTarget)
+    {
+        for (int i = 0; i < ChatRecordList.Count; i++)
+        {
+            if (ChatRecordList[i].name == chatName)
+            {
+                ChatRecordList[i].chatTarget = chatTarget;
+            }
+        }
+    }
 }
 
 [System.Serializable]

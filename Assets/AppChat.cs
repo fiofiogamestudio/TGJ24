@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class AppChat : AppBase
 {
+    public static AppChat instance;
     public GameObject ChatPrefab;
     public Transform ChatRoot;
 
@@ -16,18 +17,31 @@ public class AppChat : AppBase
     protected override void Awake()
     {
         base.Awake();
+        if (instance == null) instance = this;
 
-        BackButton.onClick.AddListener(()=>{ShowOrHideChatDetail(false);});
+        BackButton.onClick.AddListener(()=>{ShowOrHideDetail(false);});
     }
 
     protected override void Start()
     {
         base.Start();
 
-        RefreshChatToken();
+        InitChatToken();
     }
 
-    public void RefreshChatToken()
+    public Image newTip;
+    public void TipNew()
+    {
+        newTip.gameObject.SetActive(true);
+    }
+
+    public override void Open()
+    {
+        base.Open();
+        newTip.gameObject.SetActive(false);
+    }
+
+    public void InitChatToken()
     {
         while (ChatRoot.childCount != 0)
         {
@@ -46,6 +60,20 @@ public class AppChat : AppBase
         }
     }
 
+    public void RefreshChat()
+    {
+        // refresh chat tag
+        for (int i = 0; i < ChatRoot.childCount; i++)
+        {
+            var tag = ChatRoot.GetChild(i).GetComponent<ChatTag>();
+            tag.Reload();
+        }
+
+        // refresh chat detail
+        if (selectedChat != null)
+            DetailPanel.RefreshDetail(selectedChat);
+    }
+
 
 
     [ReadOnly]
@@ -56,14 +84,14 @@ public class AppChat : AppBase
         selectedChat = tag;
         if (selectedChat != null)
         {
-            ShowOrHideChatDetail(true);
+            ShowOrHideDetail(true);
         }
     }
 
     [ReadOnly]
     public bool isOpeningDetail = false;
 
-    void ShowOrHideChatDetail(bool showOrHide)
+    void ShowOrHideDetail(bool showOrHide)
     {
         if (isOpeningDetail) return;
         if (showOrHide)
@@ -82,7 +110,6 @@ public class AppChat : AppBase
             StartCoroutine(
                 IEShowOrHideChatDetail(0, 500)
             );
-
         }
     }
 

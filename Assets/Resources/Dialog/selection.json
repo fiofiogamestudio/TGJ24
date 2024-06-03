@@ -17,6 +17,48 @@
       "nextDialogID": 1,
       "content": "选项3：重新播放对话",
       "selectionCallback": ""
+    },
+    {
+      "selectionID": 20051,
+      "nextDialogID": 2006,
+      "content": "我是死者的家属",
+      "selectionCallback": "add_chat, Z, 5, 20061"
+    },
+    {
+      "selectionID": 20052,
+      "nextDialogID": 2007,
+      "content": "我在调查她的死因",
+      "selectionCallback": "add_chat, Z, 6, 20071"
+    },
+    {
+      "selectionID": 20053,
+      "nextDialogID": 0,
+      "content": "还是先不回答了",
+      "selectionCallback": ""
+    },
+    {
+      "selectionID": 200711,
+      "nextDialogID": 0,
+      "content": "错误选项",
+      "selectionCallback": "add_chat, Z, 71, 2004"
+    },
+    {
+      "selectionID": 200712,
+      "nextDialogID": 0,
+      "content": "正确选项",
+      "selectionCallback": "add_chats, Z, 2, 72, 8, 2008"
+    },
+    {
+      "selectionID": 200713,
+      "nextDialogID": 0,
+      "content": "错误选项",
+      "selectionCallback": "add_chat, Z, 71, 2004"
+    },
+    {
+      "selectionID": 200714,
+      "nextDialogID": 0,
+      "content": "还是先不回答了",
+      "selectionCallback": ""
     }
   ]
 }

@@ -14,7 +14,8 @@ public class SelectionButton : MonoBehaviour
         {
             panelController.CloseSelection();
             DialogUIManager.instance.LoadDialog(nextDialogID);
-            executeEffect(callback);
+            DialogUIManager.instance.ExecuteEffect(callback);
+            // executeEffect(callback);
         });
     }
 

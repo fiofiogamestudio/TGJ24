@@ -16,7 +16,7 @@ public class NumPadButton : MonoBehaviour
 
     public void OnClick()
     {
-        Debug.Log(111);
+        // Debug.Log(111);
         appPhone.numPadButtonOnClick(number);
     }
 }
