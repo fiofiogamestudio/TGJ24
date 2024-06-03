@@ -43,7 +43,7 @@ public class AppPhone : AppBase
         newObj.SetAsFirstSibling();
         newObj.GetChild(0).GetComponent<Text>().text = number;
         newObj.GetChild(0).GetComponent<Text>().color = Color.black;
-        newObj.GetChild(1).GetComponent<Text>().text = "2024��6��3��10:00";
+        newObj.GetChild(1).GetComponent<Text>().text = "2024年6月3日10:00";
         //��ѯ���ڵ�ʱ�䲢���ø�newObj.GetChild(1).GetComponent<Text>().text
     }
 
