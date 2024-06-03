@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Notes : MonoBehaviour
 {
-    private List<string> titles = new(new string[] { "备忘录", "记账广州trip", "公司年度总结大会", "备忘", "和宝宝一起做的100件事" });
+    private List<string> titles = new(new string[] { "备忘录", "记账广州trip", "公司年度总结大会", "备忘", "和宝宝一起做的10件事" });
     public List<Transform> transforms;
     public GameObject closeButton;
     public Text title;

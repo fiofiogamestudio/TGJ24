@@ -49,7 +49,7 @@
             "dialogID": 101,
             "dialogType": 0,
             "holderID": 2,
-            "content": "5月30日，金瑞斯咨询公司员工张丝奇坠楼事件引起轰动",
+            "content": "5月30日，金瑞斯咨询员工张丝奇坠楼事件引起轰动",
             "dialogCallback": null,
             "faceID": 0,
             "nextDialogID": 102
@@ -79,7 +79,7 @@
             "dialogID": 104,
             "dialogType": 0,
             "holderID": 2,
-            "content": "然而，唯一能接触到的只有一部手机",
+            "content": "然而，唯一能接触到的只有一部手机。或许我应该先从联系方式上开始着手",
             "dialogCallback": null,
             "faceID": 0,
             "nextDialogID": 0
