@@ -72,7 +72,7 @@ public class AppPhone : AppBase
     public void ClickDialButton()
     {
         string number = numberArea.GetComponent<Text>().text;
-        if (number == "15107611461" || true)
+        if (number == "15107611461")
         {
             if (!hasRightDial)
             {
