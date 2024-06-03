@@ -59,6 +59,30 @@
       "nextDialogID": 0,
       "content": "还是先不回答了",
       "selectionCallback": ""
+    },
+    {
+      "selectionID": 50011,
+      "nextDialogID": 0,
+      "content": "前往",
+      "selectionCallback": "end_game, 0"
+    },
+    {
+      "selectionID": 50012,
+      "nextDialogID": 0,
+      "content": "不前往",
+      "selectionCallback": ""
+    },
+    {
+      "selectionID": 50021,
+      "nextDialogID": 0,
+      "content": "出门",
+      "selectionCallback": "end_game, 1"
+    },
+    {
+      "selectionID": 50022,
+      "nextDialogID": 0,
+      "content": "不出门",
+      "selectionCallback": ""
     }
   ]
 }

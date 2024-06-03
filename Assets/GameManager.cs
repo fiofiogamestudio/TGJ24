@@ -26,6 +26,30 @@ public class GameManager : MonoBehaviour
     {
         PwdPanel.gameObject.SetActive(false);
     }
+
+    [Header("END")]
+    
+    public List<GameObject> EndPanelList = new List<GameObject>();
+
+    [ReadOnly]
+    public bool endGame = false;
+    [ReadOnly]
+    public bool successUnlock = false;
+
+    public void EndGame(int index)
+    {
+        if (!endGame)
+        {
+            endGame = true;
+            StartCoroutine(IEEndGame(index));
+        }
+    } 
+
+    IEnumerator IEEndGame(int index)
+    {
+        yield return new WaitForSeconds(1.0f);
+        EndPanelList[index].gameObject.SetActive(true);
+    }
     
 }
 

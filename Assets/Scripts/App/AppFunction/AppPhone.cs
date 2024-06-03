@@ -78,6 +78,7 @@ public class AppPhone : AppBase
             {
                 DialogUIManager.instance.ExecuteEffect("add_chat, Z, 4, 2005");
                 DialogUIManager.instance.LoadDialog(3001);
+                AppChat.instance.TipNew("Z");
                 hasRightDial = true;
             }
             else

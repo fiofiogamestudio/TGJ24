@@ -30,9 +30,16 @@ public class AppChat : AppBase
     }
 
     public Image newTip;
-    public void TipNew()
+    public void TipNew(string tagName)
     {
-        newTip.gameObject.SetActive(true);
+        int count = ChatRoot.childCount;
+        for (int i = 0; i < count; i++)
+        {
+            var tag = ChatRoot.GetChild(i).GetComponent<ChatTag>();
+            if (tag.chatName == tagName)
+                tag.TipNew();
+        }
+        // newTip.gameObject.SetActive(true);
     }
 
     public override void Open()

@@ -225,6 +225,32 @@
             "dialogCallback": null,
             "faceID": 0,
             "nextDialogID": 0
+        },
+        {
+            "$type": "DialogHolder+DialogSelection, Assembly-CSharp",
+            "dialogID": 5001,
+            "dialogType": 1,
+            "holderID": 2,
+            "content": "是否前往约定的地点",
+            "dialogCallback": null,
+            "faceID": 4,
+            "selectionList": [
+                50011,
+                50012
+            ]
+        },
+        {
+            "$type": "DialogHolder+DialogSelection, Assembly-CSharp",
+            "dialogID": 5002,
+            "dialogType": 1,
+            "holderID": 2,
+            "content": "是否出门",
+            "dialogCallback": null,
+            "faceID": 4,
+            "selectionList": [
+                50021,
+                50022
+            ]
         }
     ]
 }

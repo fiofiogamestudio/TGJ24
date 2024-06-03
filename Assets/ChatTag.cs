@@ -84,6 +84,13 @@ public class ChatTag : MonoBehaviour, IPointerClickHandler
         //     {
         //     }
         // }
+        Tip.gameObject.SetActive(false);
+    }
+
+    public Image Tip;
+    public void TipNew()
+    {
+        Tip.gameObject.SetActive(true);
     }
     
 }

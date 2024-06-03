@@ -11,10 +11,11 @@ public class PwdPanel : MonoBehaviour
     void Awake()
     {
         ConfirmButton.onClick.AddListener(()=>{
-            if (inputField.text != "")
+            if (inputField.text != "0530")
             {
                 // 正确
                 DialogUIManager.instance.LoadDialog(20082);
+                GameManager.instance.successUnlock = true;
             }
             else
             {

@@ -500,6 +500,12 @@ public class DialogUIManager : MonoBehaviour
         GameManager.instance.OpenPwdPanel();
     }
 
+    private void end_game()
+    {
+        int index = System.Convert.ToInt32(temp_args[0]);
+        GameManager.instance.EndGame(index);
+    }
+
 
 
 
