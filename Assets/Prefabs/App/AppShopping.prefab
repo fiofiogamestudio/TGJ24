@@ -880,7 +880,7 @@ MonoBehaviour:
   - "sanhu\u670D\u9970\u65D7\u8230\u5E97"
   goods:
   - "\u5C0F\u72D7\u9AA8\u5934\u72B6\u73A9\u5177"
-  - "TripleMoon \u53E4\u6E56\u7AD9 \u5DE1\u56DE\u6F14\u5531\u4F1A"
+  - "\u8BB8\u5D69 \u53E4\u6E56\u7AD9 \u5DE1\u56DE\u6F14\u5531\u4F1A"
   - "\u7CBE\u54C1\u72D7\u7CAE"
   - "\u8349\u8393\u68A8\u5B50\u5976\u6614"
   - "8\u5934\u6309\u6469\u4EEA"
@@ -906,14 +906,14 @@ MonoBehaviour:
   - "\u56DB\u5B63\u79D1\u6280\u56ED"
   - "\u53E4\u6E56\u533A\u9999\u56ED\u8857\u9053253\u53F7"
   goodIcons:
-  - {fileID: 21300000, guid: bf2d8c14146e52e488c1983490b9bfb7, type: 3}
-  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
-  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
-  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
-  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
-  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
-  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
-  - {fileID: 21300000, guid: 92728fc39b654f1489d4021cc6d90f02, type: 3}
+  - {fileID: 21300000, guid: a541762bfbea0cb45bcf29ffeefbea3b, type: 3}
+  - {fileID: 21300000, guid: 039ce26aee933694cb4158981e92b931, type: 3}
+  - {fileID: 21300000, guid: 8a5c6d0c30f56344ba8bbc49c21baa83, type: 3}
+  - {fileID: 21300000, guid: 4d35b04b01243bd47917bfd7cc361ce5, type: 3}
+  - {fileID: 21300000, guid: 6efc398f155ff184a95c52a116f966de, type: 3}
+  - {fileID: 21300000, guid: c099e2e05c7601c41aa919b548416516, type: 3}
+  - {fileID: 21300000, guid: 64f30eb6edcfdfb4586a54937117c660, type: 3}
+  - {fileID: 21300000, guid: 00acc77e6db72f748b5b4c2bcb36fb47, type: 3}
   orderPrefab: {fileID: 5556893306109416618, guid: bf5fe8f59ca3e6b479b6503907e93748, type: 3}
   prefabHolder: {fileID: 4981325389296501465}
   scrollView: {fileID: 7567591070129488652}
