@@ -8,7 +8,7 @@ public class AppNote : AppBase
     public GameObject notes;
     public List<GameObject> gameObjects;
     public List<GameObject> usersAnswer;
-    private List<string> correctAnswer = new (new string[] { "0530", "小小", "古湖区香园街道253号" });
+    private List<string> correctAnswer = new (new string[] { "0513", "小小", "古湖区香园街道253号" });
     private int currentMode = 0;
     public GameObject incorrectInfo;
 
@@ -18,7 +18,6 @@ public class AppNote : AppBase
         {
             if (usersAnswer[i].GetComponent<InputField>().text.Trim() != correctAnswer[i])
             {
-                Debug.Log(usersAnswer[i].GetComponent<InputField>().text + " ---- " + correctAnswer[i]);
                 wrongInfo();
                 return;
             }
@@ -55,5 +54,16 @@ public class AppNote : AppBase
     protected override void Awake()
     {
         base.Awake();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        incorrectInfo.SetActive(false);
+        for (int i = 0; i < gameObjects.Count; i++)
+        {
+            gameObjects[i].SetActive(false);
+        }
+        gameObjects[currentMode].SetActive(true);
     }
 }
